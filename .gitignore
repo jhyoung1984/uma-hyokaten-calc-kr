@@ -1,0 +1,21 @@
+# Translation/build tool scripts
+_*
+
+# Debug & intermediate files
+debug_*
+extract_*
+fetch_more.js
+apply_translation.js
+batch_search.js
+check_*.js
+manual_map.js
+
+# Mapping data (used during translation, not needed at runtime)
+*_mappings.json
+unmapped_skills.*
+data_jp_backup.csv
+data_kr.csv
+final_mapping.json
+
+# OMC state
+.omc/

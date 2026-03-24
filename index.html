@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang=ko>
+<head>
+<meta charset=utf-8>
+<title>우마콩가 선생의 평가점 계산 | 오픈 육성</title>
+<meta name=description content="우마무스메 오픈리그 육성용 평가점 계산 도구.">
+<meta name=robots content="index, follow">
+<meta property=og:title content=우마콩가 선생의 평가점 계산>
+<meta property=og:description content=우마무스메 오픈리그 육성용 평가점 계산 도구.>
+<meta property=og:type content=website>
+<meta property=og:url content=https://umakonga-t.github.io/hyokatenCalc/ >
+<meta name=twitter:title content=우마콩가 선생의 평가점 계산>
+<meta name=twitter:description content=우마무스메 오픈리그 육성용 평가점 계산 도구.>
+<link rel=stylesheet href=reset.min.css>
+<link rel=stylesheet href=style.css>
+</head>
+<body>
+<h1>우마무스메 오픈 육성 평가점 계산 (적성 S,A 한정)</h1>
+<details open class=accordion-001>
+<summary>스테이터스 (2001 이상은 검증 중)</summary>
+<div id=stas_box>
+<div class=input-group>
+<input type=number id=spd min=0 step=1>
+<p id=spd_pt></p>
+</div>
+<div class=input-group>
+<input type=number id=sta min=0 step=1>
+<p id=sta_pt></p>
+</div>
+<div class=input-group>
+<input type=number id=pow min=0 step=1>
+<p id=pow_pt></p>
+</div>
+<div class=input-group>
+<input type=number id=gut min=0 step=1>
+<p id=gut_pt></p>
+</div>
+<div class=input-group>
+<input type=number id=wiz min=0 step=1>
+<p id=wiz_pt></p>
+</div>
+</div>
+</details>
+<details open class=accordion-001>
+<summary>고유 스킬</summary>
+<div class=koyu_skill>
+<div class=radio-group id=star-group>
+<label>
+<input type=radio name=star id=star2 value=120>
+<span>★★ 이하</span>
+</label>
+<label>
+<input type=radio name=star id=star3 value=170 checked>
+<span>★★★ 이상</span>
+</label>
+</div>
+<div class=radio-group id=level-group>
+<label>
+<input type=radio name=level id=level1 value=1>
+<span>Lv1</span>
+</label>
+<label>
+<input type=radio name=level id=level2 value=2>
+<span>Lv2</span>
+</label>
+<label>
+<input type=radio name=level id=level3 value=3 checked>
+<span>Lv3</span>
+</label>
+<label>
+<input type=radio name=level id=level4 value=4>
+<span>Lv4</span>
+</label>
+<label>
+<input type=radio name=level id=level5 value=5>
+<span>Lv5</span>
+</label>
+<label>
+<input type=radio name=level id=level6 value=6>
+<span>Lv6</span>
+</label>
+</div>
+<div id=koyu_pt></div>
+</div>
+</details>
+<details open class=accordion-001>
+<summary>습득 스킬</summary>
+<div id=category-tabs-container data-role=big-category></div>
+<div id=sub-category-tabs-container data-role=mid-category></div>
+<div id=small-category-tabs-container data-role=small-category></div>
+<div id=items-container></div>
+<div id=skill-points class=skill-points>0</div>
+</details>
+<div id=selected-items-container class=selected-items-list data-role=selected-items></div>
+<div class=footer1>
+<div id=totalPointsContainerBottom class=rank-points data-role=total-points></div>
+<div id=remainPointsContainer class=remain-points data-role=remain-points></div>
+</div>
+<div id=bottom-buttons>
+<div class=mode-selector>
+<label for=mode-chk>
+<input type=radio id=mode-chk name=select_mode value=chk>
+<span>빨간 테두리 부여</span>
+</label>
+<label for=mode-del>
+<input type=radio id=mode-del name=select_mode value=del checked>
+<span>삭제</span>
+</label>
+</div>
+<button id=uncheck-all-button>빨간 테두리 전체 해제</button>
+<button id=reset-button data-role=reset>선택 스킬 전체 삭제</button>
+</div>
+<details class=accordion-001>
+<summary>숨김 스킬</summary>
+<div id=hidden-lists>
+<div class=edit-mode>
+<label><input type=radio id=mode-edit name=app-mode>
+<span>편집 모드 ON</span></label>
+<label><input type=radio id=mode-normal name=app-mode checked>
+<span>OFF</span></label>
+</div>
+<button id=clear-hidden-button class=action-button>
+숨김 전체 해제
+</button>
+<button id=save-hidden-button class=action-button>
+LocalStorage에 저장
+</button>
+</div>
+<div id=hidden-items-container></div>
+</details>
+<script src=data.js></script>
+<script src=main.js defer></script>
+</body>
+</html>
